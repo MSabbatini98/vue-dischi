@@ -14,7 +14,7 @@ var app_Vue = new Vue (
                 // console.log(risposta.data.response);
 
                 this.album = risposta.data.response;
-                // console.log(this.album[0].genre);
+                console.log(this.album[0].genre);
 
             })
         }
