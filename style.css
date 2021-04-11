@@ -72,11 +72,11 @@ main {
     display: inline-block;
     width: 50%;
     line-height: 30px;
-    padding: 5px;
+    padding: 5px 20px;
     overflow: hidden;
     border-radius: 5px;
-    margin: 10px 20%;
-        border: 1px solid blue;
+    margin: 14px 20%;
+        border: 1px solid white;
 }
   /* Arrow */
   .select::after {
@@ -85,7 +85,7 @@ main {
     top: 0;
     right: 0;
     bottom: 0;
-    padding: 0 15px;
+    padding: 5px 15px;
     background: #34495e;
     cursor: pointer;
     pointer-events: none;
