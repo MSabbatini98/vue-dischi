@@ -8,16 +8,19 @@
 
 body {
     font-family: 'Lato', sans-serif;
+    min-height: 100vh;
     background-color: #1e2d3b;
 }
 
 h2{
     font-size: 20px;
+    margin-top: 10px;
     text-transform: uppercase;
     color: white;
 }
 p{
     color : #808080;
+        /* border: greenyellow solid 1px; */
 }
 
 .color1{
@@ -39,21 +42,8 @@ main {
     justify-content: center;
     flex-wrap: wrap;
 }
-.card{
-    height: 360px;
-    display: inline-block;
-    margin : 20px;
-    text-align: center;
-    /* width: 360px; */
-        border: crimson 2px solid;
-}
-.card img{
-    width: 160px;
-    height: 160px;
-    margin: 20px;
-}
   /* Reset Select */
- select {
+  select {
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
@@ -94,7 +84,34 @@ main {
     transition: .25s all ease;
   }
   /* Transition */
-  .select:hover::after {
+.select:hover::after {
     color: #1ed760;
-  }
+}
   
+.card{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-basis: 200px;
+    margin : 10px 20px;
+    padding: 20px;
+    height: 360px;
+    text-align: center;
+    /* width: 360px; */
+        border: crimson 2px solid;
+}
+.card img{
+    max-width: 100%;
+    margin: 5px;
+}
+
+.bottom_info {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+}
+.bottom_info p:hover {
+    color: white;
+}

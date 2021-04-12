@@ -36,11 +36,14 @@
         </header>
 
         <main>
-            <div class="card color1">
-                <img src="https://via.placeholder.com/150" alt="nope">
-                <h2>album.title}}</h2>
-                <p>album.author}}</p>
-                <p>album.year}}</p>
+            <div class="card color1" v-for="album in album_arr">
+                <img :src="album.poster" :alt="album.title" alt="album di">
+                <h2> {{ album.title }} </h2>
+                <div class="bottom_info">
+                    <p> {{ album.author }} </p>
+                    <p> {{ album.year }} </p>
+                </div>
+
             </div> 
         </main>
        
