@@ -4,16 +4,25 @@ var app_Vue = new Vue (
     {
         el : "#app_Vue",
         data : {
-            album_arr : []
+            album_arr : [],
+            genre : [],
+            chosen_genre : "",
         },
         mounted : function () {
 
             // console.log(this, self);  //this e self sono la stessa cosa  
             axios.get("https://flynn.boolean.careers/exercises/api/array/music").then((answer) => {
 
+
                 // console.log(answer.data.response);
                 this.album_arr = answer.data.response;
 
+                this.album_arr.forEach((element, index) => {
+                    console.log(this.genre);
+                    if (!this.genre.includes(element.genre)) {
+                        this.genre.push(element.genre)
+                    }
+                });
                 
                 // console.log(answer.data.response[0].poster);
 

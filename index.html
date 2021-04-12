@@ -25,18 +25,18 @@
             <div class="header_nav color1">
                 <img src="img/spotify_logo.png" alt="logo di spotify">
                 <div class="select">
-                    <select name="slct" id="select_genre" class ="color1">
-                        <option selected disabled>Choose an option</option>
-                        <option value="1">{.{x}}</option>
-                        <option value="2">{.{NOT NICE}}</option>
-                        <option value="3">{.{Nice}}</option>
+                    <select name="slct" id="select_genre" class ="color1" v-model="chosen_genre">
+                        <option selected disabled>Which genre are you feeling today ? </option>
+                        <option value="">All genres</option>
+                        <option v-for = "single_genre in genre" :value="single_genre"> {{single_genre}}</option>
+
                     </select>
                 </div>
             </div>
         </header>
 
         <main>
-            <div class="card color1" v-for="album in album_arr">
+            <div class="card color1" v-for="album in album_arr" v-if="album.genre == chosen_genre || chosen_genre == '' ">
                 <img :src="album.poster" :alt="album.title" alt="album di">
                 <h2> {{ album.title }} </h2>
                 <div class="bottom_info">
