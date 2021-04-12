@@ -19,6 +19,7 @@ h2{
     color: white;
 }
 p{
+    font-size: 16.5px;
     color : #808080;
         /* border: greenyellow solid 1px; */
 }
@@ -41,6 +42,8 @@ main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    max-width: 1500px;
+    margin: auto;
 }
   /* Reset Select */
   select {
@@ -94,16 +97,18 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     flex-basis: 200px;
-    margin : 10px 20px;
+    margin : 20px 10px;
     padding: 20px;
     height: 360px;
     text-align: center;
     /* width: 360px; */
-        border: crimson 2px solid;
+        /* border: crimson 2px solid; */
 }
 .card img{
     max-width: 100%;
     margin: 5px;
+    height: 150px;
+    width: 150px;
 }
 
 .bottom_info {
