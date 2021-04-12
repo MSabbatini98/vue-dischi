@@ -14,8 +14,11 @@ var app_Vue = new Vue (
             axios.get("https://flynn.boolean.careers/exercises/api/array/music").then((answer) => {
 
 
+                var sorted_album = answer.data.response.sort(function (num1, num2) {
+                    return  num2.year - num1.year;
+                })
                 // console.log(answer.data.response);
-                this.album_arr = answer.data.response;
+                this.album_arr = sorted_album;
 
                 this.album_arr.forEach((element, index) => {
                     console.log(this.genre);
